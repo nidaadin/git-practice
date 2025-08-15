@@ -1,0 +1,13 @@
+stages:
+  - build
+  - test
+
+build-job:
+  stage: build
+  script:
+    - echo "Building project..."
+    - ls -la
+  stage: test
+  script:
+    - echo "testing Project..."
+    - cat hello.txt
