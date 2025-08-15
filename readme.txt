@@ -1,2 +1,2 @@
-My git practice repo
-Learning git step by step
+This is my git-practice repo
+I am learning git step by step
