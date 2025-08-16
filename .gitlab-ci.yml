@@ -1,6 +1,7 @@
 stages:
   - build
   - test
+  - deploy
 
 build-job:
   stage: build
@@ -13,3 +14,9 @@ test-job:
   script:
     - echo "testing Project..."
     - cat hello.txt
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying project..."
+    - cat missingfile.txt
