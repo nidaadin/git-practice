@@ -7,20 +7,21 @@ build-job:
   stage: build
   script:
     - echo "Building project..."
-    - mkdir output
-    - echo "Build output" > output/file.txt
+    - mkdir build
+    - echo "Build output" > build/output.txt
   artifacts:
     paths:
-      - output/
+      - build/
 
 test-job:
   stage: test
   script:
     - echo "testing Project..."
-    - cat output/file.txt
+    - cat build/output.txt
   dependencies:
     - build-job
 deploy-job:
   stage: deploy
   script:
     - echo "Deploying project..."
+    - echo "Deployment Complete"
