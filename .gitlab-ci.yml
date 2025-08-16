@@ -7,7 +7,11 @@ build-job:
   stage: build
   script:
     - echo "Building project..."
-    - ls -la
+    - mkdir output
+    - echo "Build output" > output/file.txt
+  artifacts:
+    paths:
+      - output/
 
 test-job:
   stage: test
@@ -19,4 +23,3 @@ deploy-job:
   stage: deploy
   script:
     - echo "Deploying project..."
-    - cat missingfile.txt
