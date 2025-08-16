@@ -17,8 +17,9 @@ test-job:
   stage: test
   script:
     - echo "testing Project..."
-    - cat hello.txt
-
+    - cat output/file.txt
+  dependencies:
+    - build-job
 deploy-job:
   stage: deploy
   script:
